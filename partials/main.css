@@ -1,0 +1,649 @@
+.navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+
+}
+body{
+    width:100%;
+
+}
+
+/*------------------------------------------------- The sidebar menu --------------------------------------------------------*/
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+   z-index:10;
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 27px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 254, 254);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: rgb(122, 122, 122);
+}
+
+
+.sidebar img{
+    background-color: white;
+    margin-top:5px;
+    margin-left:30px;
+}
+
+
+/* -----------------------------------------------editing buttons of sidebar -----------------------------------------*/ 
+.sidebar button {
+    padding: 10px 40px;
+    letter-spacing: 1px;
+    background-color: rgb(4, 1, 48);
+    font-size: 16px;
+    border-radius: 24px;
+    border-style: none;
+    transition-duration: 0.4s;
+  color:white;
+}
+.sidebar button:hover{
+ background-color: white;
+  color:black;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*.........................................................................................................................*/
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 10px;
+}
+
+
+/*.........................................................................................................................*/
+/*-------------------------------------- navbar editing and resolution editing--------------------------------------------- */
+
+
+
+
+
+
+
+
+/*.................home section editing......................................................................*/
+
+.home{
+     background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: cover;
+    width:100%;
+    height:100vh;
+    padding-top: 20px;
+}
+
+.home h1{
+    color:white;
+    padding-top: 90px;
+    font-size: 75px;
+    padding-right: 200px;
+    padding-left: 30px;
+}
+
+.home h2{
+    color:rgb(192, 192, 192);
+    padding-left: 460px;
+    padding-top: 60px;
+}
+
+.home button {
+    padding: 5px 15px;
+    letter-spacing: 1px;
+    background-color: rgb(255, 0, 0);
+    color:white;
+    font-size: 21px;
+    border-style: none;
+    transition-duration: 0.4s;
+}
+.home button:hover{
+ background-color: white;
+  color:black;
+}
+
+.home h3{
+    padding-left: 1000px;
+    padding-top: 30px;
+}
+/*.................End of home editing.......................................................--------------...............*/
+
+
+
+
+
+/*.................resolution for home editing.......................................................-------...............*/
+@media (min-width: 320px) and (max-width: 1023px){
+.home{
+     background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: cover;
+    width:180%;
+    height:200vh;
+}
+    .home h3{
+    padding-left: 300px;
+    padding-top: 30px;
+}
+
+.home h2{
+    color:rgb(192, 192, 192);
+    padding-left: 130px;
+    padding-top: 60px;
+    padding-right: 10px;
+}
+}
+
+
+
+@media (min-width:1024px) and (max-width:1439px){
+.home{
+     background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: fit;
+    width:100%;
+    height:100vh;
+}
+.home h2{
+    color:rgb(192, 192, 192);
+    padding-left: 500px;
+    padding-top: 50px;
+    padding-right: 10px;
+}
+.home h3{
+    padding-left: 750px;
+    padding-top: 30px;
+}
+}
+
+
+/*.................End of home resolution editing......................................................................*/
+
+
+
+
+
+
+
+
+/*.................start of artists editing.....................................................................*/
+
+#slider, .wrap, .slide-content{
+    margin:0;
+    padding:0;
+    font-family: Cabin, Helvetica, sans-serif;
+    width:100%;
+    height:100vh;
+    overflow-x:hidden;
+}
+.wrap{position:relative;}
+
+.slide{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0s;
+}
+
+.slide1{background-image: url('https://i.ytimg.com/vi/rF18zqtXKbE/maxresdefault.jpg');}
+.slide2{background-image: url('https://i.ytimg.com/vi/VpnL-FGXTUA/maxresdefault.jpg');}
+.slide3{background-image: url('https://i.ytimg.com/vi/dYsTiW8skv0/maxresdefault.jpg');}
+.slide4{background-image: url('https://i.ytimg.com/vi/882onhVmyDg/maxresdefault.jpg');}
+.slide5{background-image: url('https://i.ytimg.com/vi/W_U0G79OaZE/maxresdefault.jpg');}
+
+.slide-content{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.slide-content span{
+    font-size: 5rem;
+    color:#fff;
+    background-color:rgba(0,0,0, .6);
+    padding:10px 20px;
+}
+
+.dir-control{
+    cursor: pointer;
+    position:absolute;
+    top:50%;
+    margin-top:-30px;
+    width:0;
+    height:0;
+    z-index:5;
+}
+.fa {
+  display:inline-block;
+   line-height: 50px;
+   background-color:rgba(0,0,0, .3);
+   width:50px;
+   height:56px;
+   color:white;
+   text-align: center;
+   vertical-align: bottom;
+}
+
+#dir-control-left{
+    left:0;
+    margin-left:30px;
+}
+
+#dir-control-right{
+    right:0;
+    margin-right:60px;
+}
+.slider-active{
+    visibility:hidden;
+    opacity:0;
+}
+.slide.slide-is-active{
+    visibility:visible;
+    opacity: 1;
+}
+
+.slide-transition{
+    transition: all .5s ease-in-out;
+}
+
+
+/*.................endof artists editing.....................................................................*/
+
+/*.................start of artists resolution.....................................................................*/
+
+
+@media (min-width: 320px) and (max-width: 1023px){
+#slider, .wrap{
+    margin:0;
+    padding:0;
+    font-family: Cabin, Helvetica, sans-serif;
+    width:180%;
+    height:100vh;
+    overflow-x:hidden;
+}
+}
+
+/*.................-- end of artist resolution  .....................................................................*/
+
+/*.................-- all sections  .....................................................................*/
+
+
+.section-a {
+  position: relative;
+  background: url('https://www.pixelmusic.net/wp-content/uploads/2015/05/anime_music_wallpaper_pixelmusic.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+
+.section-b {
+  position: relative;
+  background: url('https://www.ubackground.com/_ph/86/320633713.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+.section-c {
+  position: relative;
+  background: url('https://png.pngtree.com/thumb_back/fw800/background/20200215/pngtree-neon-effect-stereo-gradient-background-image_329983.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+
+.section-d {
+  position: relative;
+  background: url('https://i.redd.it/vwr7xn47pvk51.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+.section-e {
+  position: relative;
+  background: url('https://image.freepik.com/free-vector/abstract-neon-squares-background-design_23-2148641173.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+.section-f {
+  position: relative;
+  background: url('https://i.ytimg.com/vi/LpndyzrFjN8/maxresdefault.jpg') no-repeat bottom center/cover;
+  height: 800px;;
+}
+
+.section-b-inner {
+  color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 860px;
+  padding: 5rem 0;
+}
+
+.section-b-inner h3 {
+  font-size: 2rem;
+}
+
+.section-b-inner h2 {
+  font-size: 5rem;
+  padding-top: 60px;
+}
+
+.section-b-inner p {
+  padding-top: 60px;
+  font-size: 1.5rem;
+}
+
+
+
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+  @media (min-width: 320px) and (max-width: 1023px){
+.section-a{
+  width:180%;
+}
+
+.section-b{
+  width:180%;
+}
+
+.section-c{
+  width:180%;
+}
+
+.section-d{
+  width:180%;
+}
+
+.section-e{
+  width:10%;
+}
+
+.section-f{
+  width:180%;
+}
+
+
+  }
+
+
+
+  /*.................--end of  all sections  .....................................................................*/
+
+
+
+
+
+
+
+
+  
+.footer-distributed{
+    background: rgb(0, 0, 0);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+  height: 90vh;
+    text-align: left;
+    padding: 55px 50px;
+  padding-top: 200px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+    color:  #ffffff;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+  font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  white;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  black;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+  font-weight:400;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  lightseagreen;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight:300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #000000;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+@media (min-width: 320px) and (max-width: 1023px){
+.footer-distributed{
+    background: rgb(0, 0, 0);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 180%;
+  height: 90vh;
+    text-align: left;
+    padding: 55px 50px;
+  padding-top: 200px;
+  padding-bottom: 600px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
