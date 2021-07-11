@@ -32,8 +32,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
     <section class="hello">
-        <div class="card" style="width: 40rem;">
-            <img class="card-img-top" src="https://i.pinimg.com/originals/4b/c2/95/4bc295df929c4019ed111e8311f5de2c.jpg" alt="Card image cap">
+        <div class="card mx-auto" style="width: 40rem;">
+            <img class="card-img-top" src="images/allmu.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Instrumentals</h5>
                 <p class="card-text"></p>
@@ -45,8 +45,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
     <section class="hello">
-        <div class="card" style="width: 40rem;">
-            <img class="card-img-top" src="https://i.pinimg.com/originals/4b/c2/95/4bc295df929c4019ed111e8311f5de2c.jpg" alt="Card image cap">
+        <div class="card mx-auto" style="width: 40rem;">
+            <img class="card-img-top" src="images/allmu.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">Regular</h5>
                 <p class="card-text"></p>
@@ -57,8 +57,8 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 
     <section class="hello">
-        <div class="card" style="width: 40rem;">
-            <img class="card-img-top" src="https://i.pinimg.com/originals/4b/c2/95/4bc295df929c4019ed111e8311f5de2c.jpg" alt="Card image cap">
+        <div class="card mx-auto" style="width: 40rem;">
+            <img class="card-img-top" src="images/allmu.jpg" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">User uploads</h5>
                 <p class="card-text"></p>
@@ -81,8 +81,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 .hello {
     padding-top: 100px;
     padding-bottom: 80px;
-    padding-left: 470px;
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190521/pngtree-3d-neon-light-abstract-background-image_111011.jpg');
+    background-image: url('images/all.jpg');
     background-size:cover;
     background-repeat:no-repeat;
     width: 100%;
@@ -93,20 +92,24 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
     .hello {
         padding-top: 100px;
         padding-bottom: 100px;
-        padding-left: 20px;
+        padding-left: 0px;
         background-color: rgb(0, 6, 27);
-        width: 180%;
+        width: 100%;
     }
 
-    .hello img {
-        width: 640px;
+
+    .card{
+        width:19rem !important;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .hello {
-        width: 180%;
-        padding-left: 380px;
+        width: 100%;
+        padding-left: 0px;
+    }
+    .card{
+        width:30rem !important;
     }
 }
 </style>

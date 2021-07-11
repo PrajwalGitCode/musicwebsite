@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
+    header("location: login.php");
+    exit;
+}
+
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -84,7 +96,7 @@
           <h3 class="text-2">♪ Search ♪</h3>
           <h2 class="text-5 mt-1"><a class="nav-link" ><form class="form-inline my-2 my-lg-0" method="get" action="search.php">
             <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button></a></h2>
+            <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button></a></h2>
           <p class="mt-1">
            ♪ Search from the widest range of Music, Artists, and Merchendise offered by The Alien Music ♪
           </p>

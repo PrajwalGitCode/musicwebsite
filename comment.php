@@ -43,16 +43,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div id="carousel" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active"
-                    style="background-image: url('https://www.nvidia.com/content/dam/en-zz/Solutions/geforce/laptops/max-q/geforce-rtx-max-q-1200x627-meta-image@2x.jpg');">
+                <div class="carousel-item active" style="background-image: url('images/slid1.jpg');">
                 </div>
 
-                <div class="carousel-item"
-                    style="background-image: url('https://pbs.twimg.com/media/DBPYs2TUwAAedZU.png');">
+                <div class="carousel-item" style="background-image: url('images/slid2.jpg');">
                 </div>
 
-                <div class="carousel-item"
-                    style="background-image: url('https://cdn.vox-cdn.com/thumbor/KTlrW3P1HToOn36NBhzYSWYHCoI=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16303094/ryzen_3000_cpus_lede_2.jpg');">
+                <div class="carousel-item" style="background-image: url('images/slid3.jpg');">
                 </div>
             </div>
 
@@ -73,8 +70,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <div class="jumbotron">
             <h1 class="display-4">Hello, world!</h1>
             <form action="comment.php" method="post">
-                <textarea type="text" name="fname" rows="10" cols="200"
-                    placeholder="Describe yourself here..."></textarea><br><br><br><br>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="fname" placeholder="Describe Yourself Here "
+                    rows="12"></textarea><br><br><br><br>
                 <input type="submit" name="insert" value="Post Comment">
             </form>
         </div>
@@ -111,4 +108,12 @@ input[type="text"i] {
     padding: 150px 550px;
 }
 
+.jumbotron {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
 </style>

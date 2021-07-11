@@ -1,6 +1,3 @@
-
-
-
 <?php
 include_once 'partials/_dbconnect.php';
 $result = mysqli_query($conn,"SELECT * FROM commen");
@@ -28,8 +25,8 @@ $result = mysqli_query($conn,"SELECT * FROM commen");
 while($row = mysqli_fetch_array($result)) {
 ?>
 <section class="full">
-<div class="jumbotron">
-  <h3 class="display-7">Comment #<?php echo $row["id"]?></h3>
+<div class="jumbotron ">
+  <h3 class="display-7 ">Comment #<?php echo $row["id"]?></h3>
   <p class="lead">Posted On :<?php echo $row["dt"]; ?></p>
   <hr class="my-4">
   <p><?php echo $row["fname"]; ?></p>
@@ -41,4 +38,3 @@ while($row = mysqli_fetch_array($result)) {
 
  </body>
 </html>
-

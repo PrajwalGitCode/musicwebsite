@@ -56,7 +56,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
             $bir = $row['price'];
             $kat = $row['imag'];
             echo '<section class= "play">
-                    <div class="card" style="width: 40rem;">
+                    <div class="card mx-auto" style="width: 40rem;">
                     <img class="card-img-top" src="images/' . $kat . '" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">' . $cat . '</h5>
@@ -68,21 +68,27 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
         }
         mysqli_close($conn);
     ?>
-    <section class="pages">
-        <ul class="pagination">
-            <li><a href="?pageno=1"><button type="button" class="btn btn-light">First</button></a></li>
-            <li class="<?php if($pageno <= 1){ echo 'disabled'; } ?>">
-                <a href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><button
-                        type="button" class="btn btn-light">Prev</button></a>
-            </li>
-            <li class="<?php if($pageno >= $total_pages){ echo 'disabled'; } ?>">
-                <a href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><button
-                        type="button" class="btn btn-light">Next</button></a>
-            </li>
-            <li><a href="?pageno=<?php echo $total_pages; ?>"><button type="button"
-                        class="btn btn-light">Last</button></a></li>
-        </ul>
-    </section>
+    <div class="pages">
+        <div class="container">
+            <div class="row">
+                <div class="col"><a href="?pageno=1"><button type="button" class="btn btn-warning">First</button>
+                </div>
+                <div class="col <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>"><a
+                        href="<?php if($pageno <= 1){ echo '#'; } else { echo "?pageno=".($pageno - 1); } ?>"><button
+                            type="button" class="btn btn-warning">Prev</button></a>
+                </div>
+                <div class="col <?php if($pageno >= $total_pages){ echo 'disabled'; } ?>"><a
+                        href="<?php if($pageno >= $total_pages){ echo '#'; } else { echo "?pageno=".($pageno + 1); } ?>"><button
+                            type="button" class="btn btn-warning">Next</button></a>
+                </div>
+                <div class="col"><a href="?pageno=<?php echo $total_pages; ?>"><button type="button"
+                            class="btn btn-warning">Last</button></a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <?php require 'partials/_footer.php' ?>
 </body>
 
@@ -92,22 +98,17 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 <style>
 .play {
     padding-top: 40px;
-    background-image: url('https://i.pinimg.com/originals/01/38/47/013847e254bee2b33d4996894e9933fe.jpg');
+    background-image: url('images/play1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding-bottom: 150px;
-    padding-left: 440px;
-    padding-right: 50px;
 }
 
-.card {
-    width: 70%
-}
 
 .hello {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-image: url('https://image.freepik.com/free-vector/neon-grid-background_53876-91657.jpg');
+    background-image: url('images/play2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -115,108 +116,67 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
 
 .hello h1 {
     color: white;
-    padding-left: 650px;
+    text-align: center;
     text-decoration: underline;
 }
 
+.pages {
+    background-image: url('images/play2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 
+.btn-warning {
+    width: 100%;
+}
 
-
+audio {
+    display: block;
+    margin: 1em;
+}
 
 @media (min-width: 320px) and (max-width: 767px) {
     .play {
         padding-top: 100px;
         padding-bottom: 100px;
-        padding-left: 20px;
         background-image: url('https://i.pinimg.com/originals/01/38/47/013847e254bee2b33d4996894e9933fe.jpg');
-        width: 180%;
     }
 
     .hello h1 {
         color: white;
-        padding-left: 230px;
         text-decoration: underline;
         size: 6px;
     }
 
-    .hello {
-        width: 180%;
+    .card {
+        width: 20rem !important;
     }
 
-    .pages {
-        width: 180%;
+    .btn-warning {
+        margin-top: 30px;
+        width: 100%;
     }
-
 }
 
 
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .play {
-        width: 180%;
-        padding-left: 430px;
-    }
-
-    .hello {
-        width: 180%;
-    }
-
-    .pages {
-        width: 180%;
-    }
-
     .card {
-        width: 90%
+        width: 30rem !important;
     }
 }
 
 
 @media (min-width: 1024px) and (max-width: 1439px) {
-    .play {
-        width: 100%;
-        padding-left: 220px;
-    }
-
-    .hello {
-        width: 100%;
-    }
 
     .hello h1 {
         color: white;
-        padding-left: 350px;
         text-decoration: underline;
         size: 6px;
     }
-
-    .card {
-        width: 90%
-    }
-}
-
-.pagination {
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 0px;
-}
-
-.pages {
-    background-image: url('https://image.freepik.com/free-vector/neon-grid-background_53876-91657.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.btn-light {
-    margin-left: 40px;
-
-}
-
-
-
-audio {
-    display: block;
-    margin: 1em;
 }
 </style>
 

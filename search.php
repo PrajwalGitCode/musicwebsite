@@ -135,13 +135,35 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true){
                                 <li>Make sure that all words are spelled correctly.</li>
                                 <li>Try different keywords.</li>
                                 <li>Try more general keywords. </li></ul>
-                                <li><a href="welcome.php" >Return To Home Page</a> </li>
+                                <li><a href="index.php" >Return To Home Page</a> </li>
                         </p>
                     </div>
                  </div>';
         }        
     ?>
+</section>
+<?php require 'partials/_footer.php'?>
+</body>
+</html>
 
+
+<style>
+
+.when{
+    background: url('https://media.istockphoto.com/photos/computer-generated-color-animation-3d-rendering-neon-box-of-blue-and-picture-id1177039039?b=1&k=6&m=1177039039&s=170667a&w=0&h=-eGk85WluQmCpUyIN9Pldc88amk9-NKS4dIRSZCQKIc=');
+    background-size:cover;
+    background-repeat:no-repeat;
+    height:110vh;
+    color:white;
+}
+
+.when a{
+    color:white!important;
+}
+
+.when a:hover{
+    color:blue !important;
+}
 
 
 

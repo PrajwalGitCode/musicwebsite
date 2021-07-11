@@ -204,15 +204,9 @@ h1 {
 
 .bg-3 {
     background-color: #474e5d;
-    /* Dark Blue */
     color: #ffffff;
     height: 100vh;
 }
-
-
-
-
-
 
 
 .container-fluid {
@@ -223,15 +217,13 @@ h1 {
 
 @media (min-width: 320px) and (max-width: 767px) {
     .container-fluid {
-
-        width: 180%;
+        height:150vh;
     }
-
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
     .container-fluid {
-        width: 180%;
+        width: 100%;
     }
 }
 </style>
