@@ -9,12 +9,12 @@ else{
 
 
 
-echo '<nav class="navbar navbar-dark " style="background-color: black ;">
+echo '<nav class="navbar navbar-dark fixed-top" style="background-color: black ;">
 <div id="mySidebar" class="sidebar">
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#"><img src="https://img.icons8.com/material-outlined/80/000000/black-jaguar.png"/></a>
-        <a href="/musicwebsite/welcome.php"><button type="button">Home Page</button></a>
+        <a href="/musicwebsite/index.php"><button type="button">Home Page</button></a>
         <a href="/musicwebsite/artist.php"><button type="button">The Artists</button></a>
         <a href="/musicwebsite/allmusic.php"><button type="button">Stream Music</button></a>
         <a href="/musicwebsite/store.php"><button type="button">Official Store</button></a>
@@ -51,7 +51,7 @@ echo '<nav class="navbar navbar-dark " style="background-color: black ;">
             <ul class="navbar-nav mr-auto">
 
             <li class="nav-item active">
-                <a class="nav-link" href="welcome.php">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
             </li>
 
 
@@ -65,7 +65,7 @@ echo '<nav class="navbar navbar-dark " style="background-color: black ;">
     </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="welcome.php#about1">Search Here</a>
+                <a class="nav-link" href="index.php#about1">Search Here</a>
               </li>
 
             </ul>
@@ -214,88 +214,79 @@ document.addEventListener('DOMContentLoaded', function() {
 //-----------------------------slides------------=-------------------------------------------------------------------------------//
 </script>
 <style>
-.navbar {
-    width: 100%;
-    position: fixed;
-    z-index: 10;
+.navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 
 }
-
-body {
-    width: 100%;
+body{
+    width:100%;
 
 }
 
 /*------------------------------------------------- The sidebar menu --------------------------------------------------------*/
 .sidebar {
-    height: 100%;
-    /* 100% Full-height */
-    width: 0;
-    /* 0 width - change this with JavaScript */
-    position: fixed;
-    /* Stay in place */
-    z-index: 1;
-    /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
-    /* Black*/
-    overflow-x: hidden;
-    /* Disable horizontal scroll */
-    padding-top: 10px;
-    /* Place content 60px from the top */
-    transition: 0.5s;
-    /* 0.5 second transition effect to slide in the sidebar */
-    z-index: 10;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 10px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+   z-index:10;
 }
 
 /* The sidebar links */
 .sidebar a {
-    padding: 8px 8px 27px 32px;
-    text-decoration: none;
-    font-size: 17px;
-    color: #ffffff;
-    display: block;
-    transition: 0.3s;
+  padding: 8px 8px 27px 32px;
+  text-decoration: none;
+  font-size: 17px;
+  color: #ffffff;
+  display: block;
+  transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 /* Position and style the close button (top right corner) */
 .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* The button used to open the sidebar */
 .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: rgb(255, 254, 254);
-    color: white;
-    padding: 10px 15px;
-    border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(255, 254, 254);
+  color: white;
+  padding: 10px 15px;
+  border: none;
 }
 
 .openbtn:hover {
-    background-color: rgb(122, 122, 122);
+  background-color: rgb(122, 122, 122);
 }
 
 
-.sidebar img {
+.sidebar img{
     background-color: white;
-    margin-top: 5px;
-    margin-left: 30px;
+    margin-top:5px;
+    margin-left:30px;
 }
 
 
-/* -----------------------------------------------editing buttons of sidebar -----------------------------------------*/
+/* -----------------------------------------------editing buttons of sidebar -----------------------------------------*/ 
 .sidebar button {
     padding: 10px 40px;
     letter-spacing: 1px;
@@ -304,24 +295,18 @@ body {
     border-radius: 24px;
     border-style: none;
     transition-duration: 0.4s;
-    color: white;
+  color:white;
 }
-
-.sidebar button:hover {
-    background-color: white;
-    color: black;
+.sidebar button:hover{
+ background-color: white;
+  color:black;
 }
 
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-
-    .sidebar a {
-        font-size: 18px;
-    }
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
 
 /*.........................................................................................................................*/
@@ -329,8 +314,15 @@ body {
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-    transition: margin-left .5s;
-    /* If you want a transition effect */
-    padding: 10px;
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 10px;
 }
+
+
+/*.........................................................................................................................*/
+/*-------------------------------------- navbar editing and resolution editing--------------------------------------------- */
+
+
+
+
 </style>
